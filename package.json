@@ -1,27 +1,17 @@
 {
   "name": "ian-website",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "restart": "pm2 startOrRestart ecosystem.config.js",
-    "deploy": "pm2 deploy ecosystem.config.js production",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ns-ian/ian-website.git"
-  },
-  "author": "Ian Wright",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ns-ian/ian-website/issues"
-  },
-  "homepage": "https://github.com/ns-ian/ian-website#readme",
   "dependencies": {
-    "express": "^4.16.3"
-  },
-  "devDependencies": {
-    "pm2": "^2.10.3"
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "^4.16.3",
+    "http-errors": "~1.6.2",
+    "less-middleware": "~2.2.1",
+    "morgan": "~1.9.0",
+    "pug": "2.0.0-beta11"
   }
 }
