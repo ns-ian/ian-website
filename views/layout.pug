@@ -1,7 +1,20 @@
 doctype html
-html
+html(lang='en')
   head
-    title= title
+    title= 'ian-wright.me'
+    meta(charset='utf-8')
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    block content
+    div(class='container')
+      div(class='topbar')
+        h1(class='title-text') ian wright
+      div(class='sidebar')
+        ul(class='sidebar-nav')
+          li
+            a(href='/') home
+          li
+            a(href='/about') about
+          li
+            a(href='/contact') contact
+      div(class='content')
+        block content
