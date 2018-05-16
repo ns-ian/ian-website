@@ -1,4 +1,34 @@
 extends layout
 
 block content
-  p My name is Ian.
+  h2 about me
+  p I'm currently a senior Computer Science student at Penn State Harrisburg. I like black coffee and ambient music.
+  table
+    tr
+      td #[strong education]
+      td
+        p
+          | B.S. Computer Science (in progress, anticipated December 2018)
+          br
+          | Penn State Harrisburg, Middletown, PA
+    tr
+      td #[strong skills]
+      td
+        ul(class='skill-list')
+          li
+            strong software 
+            | Vim, Android Studio, Visual Studio, Node.js, MongoDB
+          li
+            strong languages 
+            | Java, JavaScript, HTML, CSS, XML, SQL, C++
+          li
+            strong libraries/frameworks 
+            | Express, JavaFX, Jade/Pug, LESS 
+    tr
+      td #[strong github]
+      td #[a(href='https://github.com/ns-ian') click here]
+
+  p To request a detailed work history or professional references, please #[a(href='/contact') contact me].
+
+  h2(id='about-site-heading') about this site
+  p This site is hosted on AWS via their VPS service (Lightsail), running Ubuntu + Node.js.
