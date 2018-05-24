@@ -1,0 +1,338 @@
+extends ../layout
+
+block content
+  h2 Super Mega Baseball 2 stat calculator
+  p calculate your new team stats :)
+  br
+  table(id='smb2_stat_table')
+    tr
+      td #[strong NAME]
+      td #[strong POS]
+      td #[strong PWR]
+      td #[strong CON]
+      td #[strong SPD]
+      td #[strong FLD]
+      td #[strong ARM]
+      td #[strong VEL]
+      td #[strong JNK]
+      td #[strong ACC]
+    tr
+      td #[input(type='text' value='')]
+      td
+        select
+          option 1B
+          option 2B
+          option SS
+          option 3B
+          option C
+          option RF
+          option CF
+          option LF
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumLineup()' class='lineup')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumLineup()' class='lineup')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumLineup()' class='lineup')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumLineup()' class='lineup')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumLineup()' class='lineup')]
+    tr
+      td #[input(type='text' value='')]
+      td
+        select
+          option 1B
+          option 2B
+          option SS
+          option 3B
+          option C
+          option RF
+          option CF
+          option LF
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumLineup()' class='lineup')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumLineup()' class='lineup')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumLineup()' class='lineup')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumLineup()' class='lineup')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumLineup()' class='lineup')]
+    tr
+      td #[input(type='text' value='')]
+      td
+        select
+          option 1B
+          option 2B
+          option SS
+          option 3B
+          option C
+          option RF
+          option CF
+          option LF
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumLineup()' class='lineup')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumLineup()' class='lineup')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumLineup()' class='lineup')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumLineup()' class='lineup')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumLineup()' class='lineup')]
+    tr
+      td #[input(type='text' value='')]
+      td
+        select
+          option 1B
+          option 2B
+          option SS
+          option 3B
+          option C
+          option RF
+          option CF
+          option LF
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumLineup()' class='lineup')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumLineup()' class='lineup')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumLineup()' class='lineup')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumLineup()' class='lineup')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumLineup()' class='lineup')]
+    tr
+      td #[input(type='text' value='')]
+      td
+        select
+          option 1B
+          option 2B
+          option SS
+          option 3B
+          option C
+          option RF
+          option CF
+          option LF
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumLineup()' class='lineup')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumLineup()' class='lineup')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumLineup()' class='lineup')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumLineup()' class='lineup')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumLineup()' class='lineup')]
+    tr
+      td #[input(type='text' value='')]
+      td
+        select
+          option 1B
+          option 2B
+          option SS
+          option 3B
+          option C
+          option RF
+          option CF
+          option LF
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumLineup()' class='lineup')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumLineup()' class='lineup')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumLineup()' class='lineup')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumLineup()' class='lineup')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumLineup()' class='lineup')]
+    tr
+      td #[input(type='text' value='')]
+      td
+        select
+          option 1B
+          option 2B
+          option SS
+          option 3B
+          option C
+          option RF
+          option CF
+          option LF
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumLineup()' class='lineup')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumLineup()' class='lineup')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumLineup()' class='lineup')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumLineup()' class='lineup')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumLineup()' class='lineup')]
+    tr
+      td #[input(type='text' value='')]
+      td
+        select
+          option 1B
+          option 2B
+          option SS
+          option 3B
+          option C
+          option RF
+          option CF
+          option LF
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumLineup()' class='lineup')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumLineup()' class='lineup')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumLineup()' class='lineup')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumLineup()' class='lineup')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumLineup()' class='lineup')]
+    tr
+      td #[input(type='text' value='')]
+      td
+        select
+          option BN
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumBench()' class='bench')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumBench()' class='bench')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumBench()' class='bench')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumBench()' class='bench')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumBench()' class='bench')]
+    tr
+      td #[input(type='text' value='')]
+      td
+        select
+          option BN
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumBench()' class='bench')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumBench()' class='bench')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumBench()' class='bench')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumBench()' class='bench')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumBench()' class='bench')]
+    tr
+      td #[input(type='text' value='')]
+      td
+        select
+          option BN
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumBench()' class='bench')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumBench()' class='bench')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumBench()' class='bench')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumBench()' class='bench')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumBench()' class='bench')]
+    tr
+      td #[input(type='text' value='')]
+      td
+        select
+          option BN
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumBench()' class='bench')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumBench()' class='bench')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumBench()' class='bench')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumBench()' class='bench')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumBench()' class='bench')]
+    tr
+      td #[input(type='text' value='')]
+      td
+        select
+          option BN
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumBench()' class='bench')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumBench()' class='bench')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumBench()' class='bench')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumBench()' class='bench')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumBench()' class='bench')]
+    tr
+      td #[input(type='text' value='')]
+      td
+        select
+          option SP
+          option RP
+          option CP
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("1")' class='pitch1BatFld')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("1")' class='pitch1BatFld')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("1")' class='pitch1BatFld')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("1")' class='pitch1BatFld')]
+      td -
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("1")' class='pitch1Main')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("1")' class='pitch1Main')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("1")' class='pitch1Main')]
+    tr
+      td #[input(type='text' value='')]
+      td
+        select
+          option SP
+          option RP
+          option CP
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("2")' class='pitch2BatFld')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("2")' class='pitch2BatFld')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("2")' class='pitch2BatFld')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("2")' class='pitch2BatFld')]
+      td -
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("2")' class='pitch2Main')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("2")' class='pitch2Main')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("2")' class='pitch2Main')]
+    tr
+      td #[input(type='text' value='')]
+      td
+        select
+          option SP
+          option RP
+          option CP
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("3")' class='pitch3BatFld')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("3")' class='pitch3BatFld')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("3")' class='pitch3BatFld')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("3")' class='pitch3BatFld')]
+      td -
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("3")' class='pitch3Main')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("3")' class='pitch3Main')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("3")' class='pitch3Main')]
+    tr
+      td #[input(type='text' value='')]
+      td
+        select
+          option SP
+          option RP
+          option CP
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("4")' class='pitch4BatFld')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("4")' class='pitch4BatFld')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("4")' class='pitch4BatFld')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("4")' class='pitch4BatFld')]
+      td -
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("4")' class='pitch4Main')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("4")' class='pitch4Main')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("4")' class='pitch4Main')]
+    tr
+      td #[input(type='text' value='')]
+      td
+        select
+          option SP
+          option RP
+          option CP
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("5")' class='pitch5BatFld')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("5")' class='pitch5BatFld')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("5")' class='pitch5BatFld')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("5")' class='pitch5BatFld')]
+      td -
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("5")' class='pitch5Main')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("5")' class='pitch5Main')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("5")' class='pitch5Main')]
+    tr
+      td #[input(type='text' value='')]
+      td
+        select
+          option SP
+          option RP
+          option CP
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("6")' class='pitch6BatFld')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("6")' class='pitch6BatFld')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("6")' class='pitch6BatFld')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("6")' class='pitch6BatFld')]
+      td -
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("6")' class='pitch6Main')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("6")' class='pitch6Main')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("6")' class='pitch6Main')]
+    tr
+      td #[input(type='text' value='')]
+      td
+        select
+          option SP
+          option RP
+          option CP
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("7")' class='pitch7BatFld')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("7")' class='pitch7BatFld')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("7")' class='pitch7BatFld')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("7")' class='pitch7BatFld')]
+      td -
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("7")' class='pitch7Main')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("7")' class='pitch7Main')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("7")' class='pitch7Main')]
+    tr
+      td #[input(type='text' value='')]
+      td
+        select
+          option SP
+          option RP
+          option CP
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("8")' class='pitch8BatFld')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("8")' class='pitch8BatFld')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("8")' class='pitch8BatFld')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("8")' class='pitch8BatFld')]
+      td -
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("8")' class='pitch8Main')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("8")' class='pitch8Main')]
+      td #[input(type='number' min='0' max='99' value='0' onchange='sumPitch("8")' class='pitch8Main')]
+
+  p(class='fielderTotal')
+  p(class='benchTotal')
+  p(class='pitcher1Total')
+  p(class='pitcher2Total')
+  p(class='pitcher3Total')
+  p(class='pitcher4Total')
+  p(class='pitcher5Total')
+  p(class='pitcher6Total')
+  p(class='pitcher7Total')
+  p(class='pitcher8Total')
+  br
+
+  script(src='/javascripts/smb2.js')

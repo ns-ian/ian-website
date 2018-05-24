@@ -1,0 +1,40 @@
+extends layout
+
+block content
+  h1 a less quick guide to cmus
+  p.
+    Over the last couple of years, I've become a terminal purist. Familiarizing myself with Unix 
+    commands was an early necessity for my coursework, and I was eventually driven to vim out of 
+    an obstinate drive to #[em not] use an IDE; it's just better to learn without all of that 
+    magic. At the same time, I was also frustrated that the popular audio players for Linux didn't 
+    seem to offer what I was looking for. I'd somehow put up with iTunes for years, and apps like 
+    Rhythmbox and Banshee were unnecessarily cumbersome and feature-rich for my aging Thinkpad. I 
+    wanted to get back to basics, meaning I just wanted something that was lightweight, and would 
+    meet my basic requirements for a music player: simple organization, quick navigation, 
+    gapless playback, and a basic filtering capability. Enter the C* Music Player, AKA cmus.
+
+  p.
+    Getting out of the gate with cmus was a little obtuse to me back then, and the page that 
+    proved to be really helpful was 
+    #[a(href='https://www.increasinglyadequate.com/cmus.html') this] quick startup guide. In this 
+    writing, I want to give a less brief rundown of cmus, with the goal of giving the reader 
+    enough infomation to start using cmus fairly well without need for reading the man page.
+
+  h2 why cmus?
+  p.
+    I'll try to sum up the most significant benefits of cmus:
+    ul
+      li.
+        In addition to being small and lightweight, cmus is very fast. A collection of thousands 
+        of tracks can be loaded in seconds, compared to iTunes or Rhythmbox which may take several 
+        minutes or longer to add a directory to the library. Simple operations like playing, 
+        pausing, and switching between tracks occur as quickly as you can press the keys.
+      li.
+        cmus has vi-like keybindings. While this may not be an attractive feature for everyone, 
+        it feels essential for anyone doing work in vim; switching over to another tab in the 
+        terminal window and navigating to a new song or album feels downright natural. Even 
+        familiar commands like #[code :colo] work once you've got a list of themes to reference. 
+        This also means that you can (but don't have to!) control cmus entirely with your keyboard. 
+        Keybindings can be remapped, and dynamic keybindings can also be created on the fly.
+      li.
+        Runs on any Unix-like platform. That includes Cygwin.
