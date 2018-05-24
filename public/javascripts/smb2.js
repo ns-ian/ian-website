@@ -12,13 +12,10 @@ function sumLineup() {
     sum += parseInt(lineup[i].value);
   }
 
-  displayTotal.textContent = 'Starting lineup: ' + 
-                             sum + 
+  displayTotal.textContent = sum + 
                              ' points allocated, ' + 
                              parseInt(LINEUP_CAP - sum) + 
-                             ' remaining (cap: ' + 
-                             LINEUP_CAP + 
-                             ')';
+                             ' remaining';
 }
 
 function sumBench() {
@@ -30,20 +27,19 @@ function sumBench() {
     sum += parseInt(bench[i].value);
   }
 
-  displayTotal.textContent = 'Benched players: ' +
-                             sum +
+  displayTotal.textContent = sum +
                              ' points allocated, ' +
                              parseInt(BENCH_CAP - sum) +
-                             ' remaining (cap: ' +
-                             BENCH_CAP +
-                             ')';
+                             ' remaining';
 }
 
 function sumPitch(x) {
+  var pitcherName = 'pitcher' + x;
   var batFldName = 'pitch' + x + 'BatFld';
   var mainName = 'pitch' + x + 'Main';
   var query = '.pitcher' + x + 'Total';
 
+  var pitcher = document.getElementById(pitcherName);
   var batFld = document.getElementsByClassName(batFldName);
   var main = document.getElementsByClassName(mainName);
   var displayTotal = document.querySelector(query);
@@ -58,8 +54,12 @@ function sumPitch(x) {
     mainSum += parseInt(main[i].value);
   }
 
-  displayTotal.textContent = 'Pitcher ' +
-                             x +
+  var displayName = 'Pitcher ' + x;
+  if(pitcher.value != '') {
+    displayName = pitcher.value;
+  }
+
+  displayTotal.textContent = displayName +
                              ': ' +
                              batFldSum +
                              ' base points allocated, ' +
@@ -68,9 +68,5 @@ function sumPitch(x) {
                              mainSum +
                              ' pitching points allocated, ' +
                              parseInt(PITCH_MAIN_CAP - mainSum) +
-                             ' remaining (base cap: ' +
-                             PITCH_BATFLD_CAP +
-                             ', pitching cap: ' +
-                             PITCH_MAIN_CAP +
-                             ')';
+                             ' remaining';
 }

@@ -72,6 +72,7 @@ td {
 .container {
   width: 50%;
   margin: auto;
+  white-space: nowrap;
 }
 
 .topbar {
@@ -108,18 +109,6 @@ td {
   border-spacing: 5px;
 }
 
-#smb2_stat_table tr td .lineup {
-  width: 3em;
-}
-
-#smb2_stat_table tr td .bench {
-  width: 3em;
-}
-
-#smb2_stat_table tr td .pitchMain {
-  width: 3em;
-}
-
-#smb2_stat_table tr td .pitchBatFld {
+#smb2_stat_table tr td *:not(.playerName, #pitcher*) {
   width: 3em;
 }
