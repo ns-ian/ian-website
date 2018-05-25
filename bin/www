@@ -21,8 +21,8 @@ app.set('port', port);
  */
 
 var options = {
-  cert: fs.readFileSync('../sslcert/fullchain.pem'),
-  key:  fs.readFileSync('../sslcert/privkey.pem')
+  cert: fs.readFileSync('/etc/letsencrypt/live/ian-wright.me/fullchain.pem'),
+  key:  fs.readFileSync('/etc/letsencrypt/live/ian-wright.me/privkey.pem')
 };
 
 /**
