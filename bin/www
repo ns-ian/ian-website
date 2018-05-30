@@ -6,8 +6,7 @@
 
 var app = require('../app');
 var debug = require('debug')('ian-website:server');
-var https = require('https');
-var fs = require('fs');
+var http = require('http');
 
 /**
  * Get port from environment and store in Express.
@@ -17,19 +16,10 @@ var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
 /**
- * Retreieve cert and key
- */
-
-var options = {
-  cert: fs.readFileSync('/etc/letsencrypt/live/ian-wright.me/fullchain.pem'),
-  key:  fs.readFileSync('/etc/letsencrypt/live/ian-wright.me/privkey.pem')
-};
-
-/**
  * Create HTTP server.
  */
 
-var server = https.createServer(options, app);
+var server = http.createServer(app);
 
 /**
  * Listen on provided port, on all network interfaces.
