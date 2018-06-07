@@ -1,8 +1,28 @@
-doctype html
-html(lang='en')
-  head
-    title='ian-wright.me'
-    meta(charset='utf-8')
-  body(onload='game()')
-    canvas(id='gameOfLife') 
-    script(src='/javascripts/conway.js')
+extends ../layout
+
+block content
+  h2 Conway's Game of Life
+  form(onsubmit='launch();return false')
+    table
+      tr
+        td Cell size
+        td #[input(type='number' min='1' value='5' id='cellSize')]
+      tr
+        td Cell color
+        td #[input(class='jscolor' value='000000' id='cellColor')]
+      tr
+        td Background color
+        td #[input(class='jscolor' value='FFFFFF' id='bgColor')]
+      tr
+        td Game width
+        td #[input(type='number' min='10' value='500' id='areaWidth')]
+      tr
+        td Game height
+        td #[input(type='number' min='10' value='500' id='areaHeight')]
+      tr
+        td Refresh (milliseconds; lower is faster)
+        td #[input(type='number' min='1' value='50' id='gameInterval')]
+      tr
+        td(colspan='2') #[input(type='submit' value='Begin Life')]
+  script(src='/javascripts/conway.js')
+  script(src='/javascripts/jscolor.js')

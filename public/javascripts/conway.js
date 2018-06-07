@@ -1,29 +1,41 @@
-const CELL_SIZE = 5
+var cellSize, gameInterval, gameIntervalId, currentGen, nextGen, context, width, height, hCells, vCells
 
-var canvas = document.getElementById('gameOfLife')
-canvas.width = window.innerWidth
-canvas.height = window.innerHeight
+function launch () { // eslint-disable-line no-unused-vars
+  cellSize = parseInt(document.getElementById('cellSize').value)
+  gameInterval = parseInt(document.getElementById('gameInterval').value)
+  var cellColor = document.getElementById('cellColor')
+  var bgColor = document.getElementById('bgColor')
+  var areaWidth = document.getElementById('areaWidth')
+  var areaHeight = document.getElementById('areaHeight')
 
-var context = canvas.getContext('2d')
+  var gameWindow = window.open('', '', 'scrollbar=no, width=' + areaWidth.value + ', height=' + areaHeight.value)
+  gameWindow.document.body.setAttribute('style', 'margin:0;background-color:' + bgColor.value)
 
-var width = canvas.width
-var height = canvas.height
+  var canvas = gameWindow.document.createElement('canvas')
+  var gameCanvas = gameWindow.document.body.appendChild(canvas)
+  gameCanvas.setAttribute('width', areaWidth.value)
+  gameCanvas.setAttribute('height', areaHeight.value)
 
-var hCells = Math.floor(width / CELL_SIZE)
-var vCells = Math.floor(height / CELL_SIZE)
+  context = gameCanvas.getContext('2d')
+  context.fillStyle = '#' + cellColor.value
 
-var x, y
+  width = gameCanvas.width
+  height = gameCanvas.height
 
-function game () { // eslint-disable-line no-unused-vars
-  var i, j, initStatus
+  hCells = Math.floor(width / cellSize)
+  vCells = Math.floor(height / cellSize)
+
+  gameWindow.f = function () { game() }
+  gameWindow.f()
+}
+
+function game () {
+  var initStatus
   var initGen = []
 
-  x = 0
-  y = 0
-
   // initial seed
-  for (i = 0; i < vCells; i++) {
-    for (j = 0; j < hCells; j++) {
+  for (let i = 0; i < vCells; i++) {
+    for (let j = 0; j < hCells; j++) {
       initStatus = Math.floor(Math.random() * 10)
 
       if (initStatus < 5) {
@@ -36,44 +48,53 @@ function game () { // eslint-disable-line no-unused-vars
     }
   }
   draw(initGen)
+  currentGen = []
+  nextGen = []
+
+  copyGen(initGen, currentGen)
+
+  window.clearInterval(gameIntervalId)
+  gameIntervalId = window.setInterval(function () {
+    update()
+    draw(nextGen)
+    copyGen(nextGen, currentGen)
+  }, gameInterval)
 }
 
-function update (currentGen) {
-  var i, j, fieldCount
-  var nextGen = []
-
-  for (i = 0; i < currentGen.length; i++) {
-    nextGen[i] = currentGen[i].slice()
+function copyGen(origGen, destGen) {
+  for(let i = 0; i < origGen.length; i++) {
+    destGen[i] = origGen[i].slice(0)
   }
+}
 
-  for (i = 0; i < vCells; i++) {
-    for (j = 0; j < hCells; j++) {
+function update () {
+  var fieldCount
+
+  copyGen(currentGen, nextGen)
+
+  for (let i = 0; i < vCells; i++) {
+    for (let j = 0; j < hCells; j++) {
       fieldCount = getLivingNeighbors(currentGen, i, j)
       if (currentGen[i][j]) { fieldCount++ }
 
       if (fieldCount === 3) { nextGen[i][j] = true } else if (fieldCount === 4) { } else { nextGen[i][j] = false }
     }
   }
-  draw(nextGen)
 }
 
 function draw (gen) {
   context.clearRect(0, 0, width, height)
-  x = 0
-  y = 0
+  var x = 0
+  var y = 0
 
-  var i, j
-  for (i = 0; i < vCells; i++) {
-    for (j = 0; j < hCells; j++) {
-      if (gen[i][j]) { context.fillStyle = 'black' } else { context.fillStyle = 'white' }
-
-      context.fillRect(x, y, CELL_SIZE, CELL_SIZE)
-      x += CELL_SIZE
+  for (let i = 0; i < vCells; i++) {
+    for (let j = 0; j < hCells; j++) {
+      if (gen[i][j]) { context.fillRect(x, y, cellSize, cellSize) }
+      x += cellSize
     }
-    y += CELL_SIZE
+    y += cellSize
     x = 0
   }
-  setTimeout(function () { update(gen) }, 50)
 }
 
 function getLivingNeighbors (arr, i, j) {
