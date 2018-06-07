@@ -61,8 +61,8 @@ function game () {
   }, gameInterval)
 }
 
-function copyGen(origGen, destGen) {
-  for(let i = 0; i < origGen.length; i++) {
+function copyGen (origGen, destGen) {
+  for (let i = 0; i < origGen.length; i++) {
     destGen[i] = origGen[i].slice(0)
   }
 }

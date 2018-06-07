@@ -2,6 +2,11 @@
   "name": "ian-website",
   "version": "0.0.0",
   "private": true,
+  "standard": {
+    "ignore": [
+      "/public/javascripts/jscolor.js"
+    ]
+  },
   "scripts": {
     "start": "node ./bin/www",
     "restart": "pm2 startOrRestart ecosystem.config.js",
