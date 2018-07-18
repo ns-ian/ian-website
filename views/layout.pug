@@ -9,19 +9,22 @@ html(lang='en')
       div(class='topbar')
         h1(class='title-text')
           | ian wright
-          a(href='https://www.linkedin.com/in/ian-wright-7912657b/' id='linkedin')
+          a(href='https://www.linkedin.com/in/ian-wright-7912657b/' id='linkedin' alt='linkedin')
             img(src='/images/In-2C-34px-TM.png')
-          a(href='https://github.com/ns-ian' id='github')
+          a(href='https://github.com/ns-ian' id='github' alt='github')
             img(src='/images/GitHub-Mark-32px.png')
-      div(class='sidebar')
-        ul(class='sidebar-nav')
-          li
-            a(href='/') home
-          li
-            a(href='/fun') fun
-          li
-            a(href='/about') about
-          li
-            a(href='/contact') contact
-      div(class='content')
-        block content
+      div(class='body')
+        div(class='sidebar')
+          ul(class='sidebar-nav')
+            li
+              a(href='/') home
+            li
+              a(href='/blog') blog
+            li
+              a(href='/fun') fun
+            li
+              a(href='/about') about
+            li
+              a(href='/contact') contact
+        div(class='content')
+          block content
