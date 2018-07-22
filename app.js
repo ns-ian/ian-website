@@ -1,3 +1,4 @@
+var dotenv = require('dotenv')
 var createError = require('http-errors')
 var express = require('express')
 var path = require('path')
@@ -14,13 +15,20 @@ var blogRouter = require('./routes/blog')
 
 var app = express()
 
+// get environment variables
+var result = dotenv.config()
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'pug')
 
 // database setup
-var mongoDB = 'mongodb://localhost:27017/ian-db'
-mongoose.connect(mongoDB)
+var mongoDB = process.env.MONGO_URI
+mongoose.connect(mongoDB,
+  {
+    useNewUrlParser: true,
+    auth: { authdb: 'admin' }
+  })
 mongoose.Promise = global.Promise
 
 // middleware

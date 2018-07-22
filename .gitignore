@@ -6,3 +6,5 @@ node_modules
 .*.*.swap
 *.swo
 .*.*.swo
+.env
+*.env

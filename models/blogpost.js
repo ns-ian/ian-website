@@ -9,7 +9,7 @@ var BlogPostSchema = new Schema(
     date: {type: Date, required: true}
   },
   {
-    collection: 'inventory'
+    collection: 'blog'
   }
 )
 

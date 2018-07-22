@@ -3,7 +3,7 @@ extends ../layout
 block content
   ul
     each item in post
-      li
+      li(style="margin-bottom: 15px;")
         a(href=item.url) #{item.title}
         | #[br] #{item.caption}
 

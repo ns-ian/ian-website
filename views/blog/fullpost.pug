@@ -2,7 +2,8 @@ extends ../layout
 
 block content
 
-  h2 #{post.title}
-  p #{post.caption}
-  p !{post.body}
-  p #{post.date}
+  h2(style="margin-bottom: 5px;") #{post.title} #[br]
+  p(style="margin-bottom: 15px;")
+    em #{post.caption}
+  p(style="margin-bottom: 15px;") !{post.body}
+  p Posted on: #{post.date}
