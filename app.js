@@ -27,7 +27,7 @@ var mongoDB = process.env.MONGO_URI
 mongoose.connect(mongoDB,
   {
     useNewUrlParser: true,
-    auth: { authdb: 'admin' }
+    auth: { authdb: 'ian-db' }
   })
 mongoose.Promise = global.Promise
 
