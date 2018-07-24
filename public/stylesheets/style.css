@@ -1,5 +1,6 @@
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: #2F3536;
 }
 h2 {
   margin-top: 0;
@@ -45,7 +46,7 @@ td {
   margin: auto;
 }
 .topbar {
-  border-bottom: medium solid black;
+  border-bottom: thin solid black;
   margin-bottom: 15px;
   margin-top: 100px;
 }
@@ -57,7 +58,6 @@ td {
   margin-right: 30px;
 }
 .content {
-  overflow-wrap: break-word;
   margin: 0;
   padding: 0;
 }
