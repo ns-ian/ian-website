@@ -6,7 +6,8 @@ var BlogPostSchema = new Schema(
     title: {type: String, required: true},
     caption: {type: String, required: true},
     body: {type: String, required: true},
-    date: {type: Date, required: true}
+    date: {type: Date, required: true},
+    edited: {type: Date, required: false}
   },
   {
     collection: 'blog'
