@@ -1,9 +1,11 @@
 var blogpost = require('../models/blogpost')
 
 exports.blogpost_list = function (req, res, next) {
-  blogpost.find({}, function (err, posts) {
-    if (err) { return next(err) }
-    res.render('blog/index', { post: posts })
+  blogpost.find()
+    .sort({ date: -1 })
+    .exec(function (err, posts) {
+      if (err) { return next(err) }
+      res.render('blog/index', { post: posts })
   })
 }
 

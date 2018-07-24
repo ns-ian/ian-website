@@ -12,7 +12,7 @@ p {
   margin: 0;
 }
 a {
-  color: #000000;
+  color: #2F3536;
   font-weight: bold;
   text-decoration: none;
 }
@@ -66,9 +66,11 @@ td {
 }
 #linkedin {
   float: right;
+  vertical-align: text-bottom;
 }
 #github {
   float: right;
+  vertical-align: text-bottom;
 }
 #smb2_stat_table {
   border-spacing: 5px;
