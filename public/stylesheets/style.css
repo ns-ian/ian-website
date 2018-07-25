@@ -29,7 +29,7 @@ li {
   margin-bottom: 15px;
 }
 .title-text a img {
-  vertical-align: bottom;
+  vertical-align: middle;
   margin-left: 10px;
 }
 table {
@@ -66,11 +66,9 @@ td {
 }
 #linkedin {
   float: right;
-  vertical-align: text-bottom;
 }
 #github {
   float: right;
-  vertical-align: text-bottom;
 }
 #smb2_stat_table {
   border-spacing: 5px;

@@ -6,7 +6,7 @@ exports.blogpost_list = function (req, res, next) {
     .exec(function (err, posts) {
       if (err) { return next(err) }
       res.render('blog/index', { post: posts })
-  })
+    })
 }
 
 exports.blogpost_full = function (req, res, next) {
