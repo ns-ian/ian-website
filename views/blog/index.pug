@@ -4,7 +4,8 @@ block content
   ul
     each item in post
       li(style="margin-bottom: 15px;")
-        a(href=item.url style="font-size: 1.2em") #{item.title}
+        | #[span(style="font-size: .7em;") #{item.date_formatted}]
+        | #[br] #[a(href=item.url style="font-size: 1.2em") #{item.title}]
         | #[br] #{item.caption}
 
     else
