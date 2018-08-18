@@ -2,17 +2,10 @@ extends ../layout
 
 block content
   h2 Conway's Game of Life
-  p
-    | Life is cellular automaton devised by the mathematician John Conway in the 1970s. The game 
-    | is 'played' on a two-dimensional grid, where each individual cell is either #[em alive] or 
-    | #[em dead]. As the game moves from one generation to the next (i.e. each time the grid is 
-    | redrawn), each cell interacts with its neighboring cells: a living cell with less than two 
-    | living neighbors will die (due to underpopulation), a living cell with two or three living 
-    | neighbors survives to the next generation, and a living cell with more than three living 
-    | neighbors will die (due to overpopulation). Additionally, dead cells with exactly three 
-    | living neighbors will subsequently become live cells (due to reproduction). In my own 
-    | implementation, the game cells are randomly seeded with values at the beginning, and all 
-    | subsequent activity plays out according to the aforementioned rules.
+  p 
+    | The classic cellular automaton. I made this as an exercise to get more familiar with 
+    | JavaScript. Description and rules 
+    | #[a(href='https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life') here].
   form(onsubmit='launch();return false')
     table
       tr

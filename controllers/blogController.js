@@ -2,7 +2,7 @@ var blogpost = require('../models/blogpost')
 
 exports.blogpost_list = function (req, res, next) {
   blogpost.find()
-    .sort({ date: -1 })
+    .sort({ _id: -1 })
     .exec(function (err, posts) {
       if (err) { return next(err) }
       res.render('blog/index', { title: 'blog', post: posts })
