@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser')
 var lessMiddleware = require('less-middleware')
 var logger = require('morgan')
 var mongoose = require('mongoose')
+var bodyParser = require('body-parser')
 
 var indexRouter = require('./routes/index')
 var aboutRouter = require('./routes/about')
@@ -39,6 +40,7 @@ app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(lessMiddleware(path.join(__dirname, 'public')))
 app.use(express.static(path.join(__dirname, 'public')))
+app.use(bodyParser.urlencoded({extended: true}))
 
 // routers
 app.use('/', indexRouter)

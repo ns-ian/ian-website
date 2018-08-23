@@ -58,6 +58,33 @@ td {
   vertical-align: top;
 }
 
+//Forms
+form {
+  white-space: nowrap;
+}
+
+form fieldset {
+  width: 100%;
+  border: 1px solid #2F3536;
+  padding: 20px;
+}
+
+form fieldset textarea {
+  width: 70%;
+  margin-bottom: 15px;
+}
+
+form fieldset label {
+  float: left;
+  text-align: right;
+  width: 25%;
+  padding-right: 5px;
+}
+
+form fieldset input {
+  margin-bottom: 15px;
+}
+
 //Layout attributes
 .container {
   width: 60%;
@@ -95,12 +122,4 @@ td {
 
 #github {
   float: right;
-}
-
-#smb2_stat_table {
-  border-spacing: 5px;
-}
-
-#smb2_stat_table tr td *:not(.playerName, #pitcher*) {
-  width: 3em;
 }

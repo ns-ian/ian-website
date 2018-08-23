@@ -15,6 +15,8 @@
     "standard-fix": "standard --fix"
   },
   "dependencies": {
+    "aws-sdk": "^2.296.0",
+    "body-parser": "^1.18.3",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "dotenv": "^6.0.0",
@@ -24,6 +26,7 @@
     "moment": "^2.22.2",
     "mongoose": "^5.2.1",
     "morgan": "~1.9.0",
+    "nodemailer": "^4.6.8",
     "pug": "2.0.0-beta11"
   },
   "devDependencies": {
