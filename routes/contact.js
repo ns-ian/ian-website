@@ -25,9 +25,9 @@ router.post('/', function (req, res, next) {
   smtpTransport.sendMail(mailData, function (error, response) {
     if (error) {
       console.log(error)
-      res.render('contact/contact-error')
+      res.render('contact/contact-error', { title: 'message sent!' })
     } else {
-      res.render('contact/contact-success')
+      res.render('contact/contact-success' { title: 'error' })
     }
   })
 })

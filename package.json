@@ -15,7 +15,6 @@
     "standard-fix": "standard --fix"
   },
   "dependencies": {
-    "aws-sdk": "^2.296.0",
     "body-parser": "^1.18.3",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
