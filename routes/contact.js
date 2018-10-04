@@ -27,7 +27,7 @@ router.post('/', function (req, res, next) {
       console.log(error)
       res.render('contact/contact-error', { title: 'message sent!' })
     } else {
-      res.render('contact/contact-success' { title: 'error' })
+      res.render('contact/contact-success', { title: 'error' })
     }
   })
 })
