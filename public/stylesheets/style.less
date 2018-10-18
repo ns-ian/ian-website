@@ -1,7 +1,15 @@
+// Variables
+
+@bg-color: #FFFFFF;
+@text-color: #2F3536;
+@link-color: @text-color;
+@pre-bg-color: #EFF0F1;
+@footer-text-color: #C0C0C0;
+
 body {
   font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
-  color: #2F3536;
-  background-color: #FFFFFF;
+  color: @text-color;
+  background-color: @bg-color;
 }
 
 //Text attributes
@@ -17,7 +25,7 @@ p {
 }
 
 a {
-  color: #2F3536;
+  color: @link-color;
   font-weight: bold;
   text-decoration: none;
 }
@@ -33,7 +41,7 @@ li {
 }
 
 pre {
-  background-color: #EFF0F1;
+  background-color: @pre-bg-color;
   display: block;
   white-space: pre;
   overflow-x: auto;
@@ -49,7 +57,16 @@ pre {
   margin-left: 10px;
 }
 
+.footer {
+  font-size: 0.75em;
+  color: @footer-text-color;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
 //Tables
+
 table {
   margin: 0;
   padding: 0;
@@ -62,6 +79,7 @@ td {
 }
 
 //Forms
+
 form {
   white-space: nowrap;
 }
@@ -72,14 +90,14 @@ form fieldset {
 }
 
 form fieldset textarea {
-  width: 80%;
+  width: 85%;
   margin-bottom: 15px;
 }
 
 form fieldset label {
   float: left;
   text-align: right;
-  width: 20%;
+  width: 15%;
   padding-right: 5px;
 }
 
@@ -88,6 +106,7 @@ form fieldset input {
 }
 
 //Layout attributes
+
 .container {
   width: 60%;
   margin: auto;
@@ -115,6 +134,7 @@ form fieldset input {
 }
 
 //Individual IDs
+
 #about-site-heading {
   margin-top: 20px;
 }
