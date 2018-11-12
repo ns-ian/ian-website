@@ -1,9 +1,11 @@
 extends ../layout
 
 block content
+  h2 weblog
+  p Thoughts about programming, computing, and probably video games.
   ul
     each item in post
-      li(style="margin-bottom: 15px;")
+      li(style="margin: 15px 0px 15px 0px;")
         | #[span(style="font-size: .7em;") #{item.date_formatted}]
         | #[br] #[a(href=item.url style="font-size: 1.2em") #{item.title}]
         | #[br] #{item.caption}
